@@ -18,7 +18,7 @@ public class HashingSlidingWindows {
         long p = 1;
         // calculate the hash of needle
         for(int i = 0; i < n_needle; i++){
-            int current = needle.charAt(i) -'a'+1;
+            int current = needle.charAt(i);
             needle_hash = (needle_hash + (current*p)%mod)%mod;
             p = (p* prime)%mod;
         }
@@ -29,7 +29,7 @@ public class HashingSlidingWindows {
         p =1;
         long haystack_hash = 0;
         for(int i = 0; i <= right; i++){
-            int current = haystack.charAt(i)-'a'+1;
+            int current = haystack.charAt(i);
             haystack_hash = (haystack_hash + (current*p)%mod)%mod;
             p = (p* prime)%mod;
         }
@@ -43,12 +43,12 @@ public class HashingSlidingWindows {
         // go until n_haystack-1
         while(right < n_haystack-1){
 
-            int char_left = haystack.charAt(left) -'a'+1;
+            int char_left = haystack.charAt(left);
 
             haystack_hash = (haystack_hash - (char_left* power(p, left, mod)%mod) + mod)%mod;
             left++;
             right++;
-            int char_right = haystack.charAt(right) -'a'+1;
+            int char_right = haystack.charAt(right);
 
             haystack_hash = (haystack_hash + (char_right* power(p, right, mod))%mod)%mod;
 

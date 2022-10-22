@@ -1,6 +1,6 @@
 package string.concept;
 
-public class HashingSlidingWindowsWithPrecomputation {
+public class HashingSlidingWindowsWithPreComputation {
 
     public static void main(String[] args) {
         int mod= 1_000_000_007;
