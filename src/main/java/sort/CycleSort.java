@@ -21,7 +21,7 @@ public class CycleSort {
 
             while(nums[i]!= i){
                 int d = nums[i]; // d an index but we put arr[i]
-                if(d>= n){ //difference
+                if(d>= n){ //difference - because the value are thant index array
                     break;
                 }
                 swap(nums, i, d);
@@ -51,7 +51,7 @@ public class CycleSort {
 
             while(i+1!= nums[i]){
                 int d = nums[i]-1;
-                if(nums[i] == nums[d]){ //difference
+                if(nums[i] == nums[d]){ //difference - because duplicate
                     break;
                 }
                 swap(nums, d, i);
